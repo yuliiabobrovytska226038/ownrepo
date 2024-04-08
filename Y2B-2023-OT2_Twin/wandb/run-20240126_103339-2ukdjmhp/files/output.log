@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "c:\Users\User\Desktop\2023-24b-fai2-adsai-yuliiabobrovytska226038\2. Robotics\RL_train.py", line 36, in <module>
+    env = DummyVecEnv([lambda: OT2Env()])
+  File "C:\Users\User\anaconda3\envs\google\lib\site-packages\stable_baselines3\common\vec_env\dummy_vec_env.py", line 44, in __init__
+    self.keys, shapes, dtypes = obs_space_info(obs_space)
+  File "C:\Users\User\anaconda3\envs\google\lib\site-packages\stable_baselines3\common\vec_env\util.py", line 60, in obs_space_info
+    check_for_nested_spaces(obs_space)
+  File "C:\Users\User\anaconda3\envs\google\lib\site-packages\stable_baselines3\common\preprocessing.py", line 225, in check_for_nested_spaces
+    raise NotImplementedError(
+NotImplementedError: Nested observation spaces are not supported (Tuple/Dict space inside Tuple/Dict space).
