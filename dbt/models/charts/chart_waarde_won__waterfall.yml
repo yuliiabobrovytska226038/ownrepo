@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: chart_waarde_won__waterfall
+    description: "Chart input for policy value waterfall charts. Grain: one row per classification and waterfall step. Required columns: Classificatie, Stap, Volgorde, Waarde, Procent, Text."
+    columns:
+      - name: "Classificatie"
+        description: "Value classification or housing segment."
+      - name: "Stap"
+        description: "Waterfall step label or name."
+      - name: "Waarde"
+        description: "Value amount for this waterfall step."
+      - name: "Procent"
+        description: "Percentage contribution of this waterfall step."
+      - name: "Text"
+        description: "Display label or annotation for the waterfall bar."
+      - name: "Volgorde"
+        description: "Sort order of the waterfall step."

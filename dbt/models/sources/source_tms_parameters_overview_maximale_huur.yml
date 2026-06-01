@@ -1,0 +1,47 @@
+version: 2
+
+sources:
+  - name: tms
+    schema: tms
+    description: "Raw TMS report tables materialized by Dagster assets."
+    tables:
+      - name: parameters_overview_maximale_huur
+        columns:
+          - name: "Waarderingscomplex"
+            description: "TMS valuation complex code."
+          - name: "Complexnaam"
+            description: "Name of the valuation complex."
+          - name: "VHE-nr"
+            description: "Rental unit (VHE) number."
+          - name: "Adres"
+            description: "Street address of the rental unit."
+          - name: "Model"
+            description: "Valuation model applied to the unit."
+          - name: "Handboektype"
+            description: "Handbook type classification for the unit."
+          - name: "Classificatie"
+            description: "Asset classification (e.g., DAEB, Niet-DAEB)."
+          - name: "Bron maximale huur"
+            description: "Source of the maximum rent value used in valuation."
+          - name: "WWS punten"
+            description: "Housing quality points score (Woningwaarderingsstelsel)."
+          - name: "Maximale huur (input)"
+            description: "Input maximum rent cap for the rental unit."
+          - name: "Maximale huur excl. opslag in berekening"
+            description: "Maximum rent excluding surcharge as used in calculation."
+          - name: "Beschermd bezit"
+            description: "Indicator for price-capped (protected) housing units."
+          - name: "Startdatum contract"
+            description: "Start date of the current tenancy contract."
+          - name: "Beschermd bezit opslag huidig contract (%)"
+            description: "Rent surcharge percentage for protected units, current contract."
+          - name: "Beschermd bezit opslag nieuw contract (%)"
+            description: "Rent surcharge percentage for protected units, new contract."
+          - name: "Nieuwbouwopslag"
+            description: "New-build surcharge applied to the maximum rent."
+          - name: "Corporatie"
+            description: "Housing corporation name."
+          - name: "Jaar"
+            description: "Valuation year."
+          - name: "Peildatum"
+            description: "Valuation reference date (Dec 31)."

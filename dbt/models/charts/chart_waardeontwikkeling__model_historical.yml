@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: chart_waardeontwikkeling__model_historical
+    description: "Chart input for historical marktwaardeontwikkeling per model. Grain: one row per year and waarderingsmodel. Required columns: Jaar, Waarderingsmodel, % Mutatie, Text."
+    columns:
+      - name: "Waarderingsmodel"
+        description: "Valuation model (doorexploiteren or uitponden)."
+      - name: "% Mutatie"
+        description: "Year-over-year percentage change in market value."
+      - name: "Jaar"
+        description: "Valuation year."
+      - name: "Text"
+        description: "Formatted label displaying % Mutatie for chart annotation."

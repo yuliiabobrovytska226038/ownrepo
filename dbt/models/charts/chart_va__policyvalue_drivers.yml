@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: chart_va__policyvalue_drivers
+    description: "Chart-ready policy value drivers (top-5 effects + Overige mutaties). Pre-computed from TMS verschillenanalyse with step cleaning, base-value normalization, top-N selection, and cumulative sums."
+    columns:
+      - name: "Waarderingstype"
+        description: "Always 'Beleidswaarde'."
+      - name: "Stap"
+        description: "Value driver step name (cleaned and merged)."
+      - name: "Mutatie"
+        description: "Fractional effect of this step on total value change."
+      - name: "Cumulatief"
+        description: "Running cumulative sum of effects."
+      - name: "Text Mutatie"
+        description: "Formatted label for Mutatie (Dutch locale percentage)."
+      - name: "Text Cumulatief"
+        description: "Formatted label for Cumulatief (Dutch locale percentage)."

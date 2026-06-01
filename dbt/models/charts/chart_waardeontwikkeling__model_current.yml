@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: chart_waardeontwikkeling__model_current
+    description: "Chart input for current-year marktwaardeontwikkeling per model. Grain: one row per waarderingsmodel. Required columns: Waarderingsmodel, % Mutatie, Text."
+    columns:
+      - name: "Waarderingsmodel"
+        description: "Valuation model (doorexploiteren or uitponden)."
+      - name: "Marktwaarde"
+        description: "Current-year total market value for the valuation model."
+      - name: "Marktwaarde_2023"
+        description: "Prior-year total market value for the valuation model."
+      - name: "Aantal VHE"
+        description: "Number of rental units in the valuation model group."
+      - name: "€ Mutatie"
+        description: "Absolute euro change in market value year-over-year."
+      - name: "% Mutatie"
+        description: "Year-over-year percentage change in market value."
+      - name: "Index Mutatie"
+        description: "Index value representing relative market value change."
+      - name: "Text"
+        description: "Formatted label displaying % Mutatie for chart annotation."

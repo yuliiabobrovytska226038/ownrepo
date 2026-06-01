@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: chart_waardeontwikkeling_won__current_t0
+    description: "Chart input for current-year woningen value-development bars. Grain: one row per waarderingstype. Required columns: Waarderingstype, Jaar, % Mutatie, Index Mutatie, Text."
+    columns:
+      - name: "Waarderingstype"
+        description: "Valuation type (e.g. marktwaarde, beleidswaarde)."
+      - name: "Jaar"
+        description: "Valuation year."
+      - name: "Marktwaarde"
+        description: "Total market value in the current valuation year."
+      - name: "Marktwaarde_2023"
+        description: "Total market value in the prior valuation year (2023)."
+      - name: "Aantal VHE"
+        description: "Number of rental units (VHE) included."
+      - name: "Waardeontwikkeling"
+        description: "Value development label or category."
+      - name: "€ Mutatie"
+        description: "Absolute euro change in value year-on-year."
+      - name: "% Mutatie"
+        description: "Year-on-year percentage change in value."
+      - name: "Index Mutatie"
+        description: "Cumulative index mutation relative to a base year."
+      - name: "Text"
+        description: "Display annotation text for the chart bar."
+      - name: "Beleidswaarde"
+        description: "Total policy (social) value in the current year."
+      - name: "Beleidswaarde_2023"
+        description: "Total policy value in the prior valuation year (2023)."

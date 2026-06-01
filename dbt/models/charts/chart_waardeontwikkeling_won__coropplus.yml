@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: chart_waardeontwikkeling_won__coropplus
+    description: "Chart parity input for woningen value-development COROP-plus maps. Grain: one row per value type and COROP-plus region with at least 250 VHE. Required columns include Waarde, COROP-plusgebieden Code, COROP-plusgebieden Naam, current/prior value columns, VHE-nr, and mutation columns."
+    columns:
+      - name: "Waarde"
+        description: "Value type label (market or policy value)."
+      - name: "COROP-plusgebieden Code"
+        description: "COROP-plus region geographic code."
+      - name: "COROP-plusgebieden Naam"
+        description: "COROP-plus region name."
+      - name: "Marktwaarde"
+        description: "Aggregated market value for the COROP-plus region."
+      - name: "Marktwaarde_2023"
+        description: "Prior-year aggregated market value for the COROP-plus region."
+      - name: "Beleidswaarde"
+        description: "Aggregated policy value for the COROP-plus region."
+      - name: "Beleidswaarde_2023"
+        description: "Prior-year aggregated policy value for the COROP-plus region."
+      - name: "VHE-nr"
+        description: "Count of rental units (VHE) in the COROP-plus region."
+      - name: "€ Mutatie"
+        description: "Absolute euro change in value year-on-year."
+      - name: "% Mutatie"
+        description: "Year-on-year percentage change in value."
+      - name: "Index Mutatie"
+        description: "Cumulative index mutation relative to a base year."
+      - name: "Text"
+        description: "Display annotation text for the map or chart."

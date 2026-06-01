@@ -1,0 +1,42 @@
+version: 2
+
+sources:
+  - name: tms
+    schema: tms
+    description: "Raw TMS report tables materialized by Dagster assets."
+    tables:
+      - name: vastgoedgegevens_waarderingscomplexen
+        description: "VGR real estate data at complex (waarderingscomplex) level."
+        columns:
+          - name: "Complexcode"
+            description: "Valuation complex code."
+          - name: "Complexnaam"
+            description: "Name of the valuation complex."
+          - name: "Werkmaatschappij"
+            description: "Operating company within the housing corporation."
+          - name: "Waarderingsmodel"
+            description: "Valuation model (doorexploiteren or uitponden)."
+          - name: "Exploitatiebeperking 7 jaar"
+            description: "Indicates a 7-year exploitation restriction on the complex."
+          - name: "Complexstatus"
+            description: "Current status of the complex (active, planned, etc.)."
+          - name: "Gesplitst"
+            description: "Indicates whether the complex is split across valuations."
+          - name: "Flexwoning"
+            description: "Indicates whether units are designated as flexible housing."
+          - name: "Aangebroken"
+            description: "Indicates whether the complex is partially sold off."
+          - name: "Mutatiekans"
+            description: "Estimated vacancy turnover probability for the complex."
+          - name: "Maximaal verkoopbaar (%)"
+            description: "Maximum percentage of complex units permitted for sale."
+          - name: "Deelportefeuille"
+            description: "Sub-portfolio designation (BASIC or FULL)."
+          - name: "Referentiegroep"
+            description: "Reference group used for benchmarking this complex."
+          - name: "Corporatie"
+            description: "Housing corporation name."
+          - name: "Jaar"
+            description: "Valuation year."
+          - name: "Peildatum"
+            description: "Valuation reference date (Dec 31)."

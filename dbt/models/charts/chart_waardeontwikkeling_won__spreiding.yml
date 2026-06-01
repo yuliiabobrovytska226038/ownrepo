@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: chart_waardeontwikkeling_won__spreiding
+    description: "Chart parity input for beleidswaardeontwikkeling spread boxplot. Grain: one row per corporation. Required columns include Corporatie, current/prior beleidswaarde, and mutation columns."
+    columns:
+      - name: "Corporatie"
+        description: "Housing corporation name."
+      - name: "Beleidswaarde"
+        description: "Total policy value in the current year."
+      - name: "Beleidswaarde_2023"
+        description: "Total policy value in the prior year (2023)."
+      - name: "€ Mutatie"
+        description: "Absolute euro change in policy value year-on-year."
+      - name: "% Mutatie"
+        description: "Year-on-year percentage change in policy value."
+      - name: "Index Mutatie"
+        description: "Cumulative index mutation relative to a base year."
+      - name: "Text"
+        description: "Display annotation text for the boxplot."

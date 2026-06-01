@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: chart_waardeontwikkeling_won__waarde
+    description: "Chart parity input for current-year woningen value development by value filter. Grain: one row per value filter, waarderingstype, and year. Required columns include WaardeFilter, Waarderingstype, Jaar, current/prior value columns, Aantal VHE, and mutation columns."
+    columns:
+      - name: "WaardeFilter"
+        description: "Value segment filter label (e.g. all, DAEB, non-DAEB)."
+      - name: "Waarderingstype"
+        description: "Valuation type (e.g. marktwaarde, beleidswaarde)."
+      - name: "Jaar"
+        description: "Valuation year."
+      - name: "Marktwaarde"
+        description: "Total market value in the current year."
+      - name: "Marktwaarde_2023"
+        description: "Total market value in the prior year (2023)."
+      - name: "Beleidswaarde"
+        description: "Total policy value in the current year."
+      - name: "Beleidswaarde_2023"
+        description: "Total policy value in the prior year (2023)."
+      - name: "Aantal VHE"
+        description: "Number of rental units (VHE) included."
+      - name: "Waardeontwikkeling"
+        description: "Value development label or category."
+      - name: "€ Mutatie"
+        description: "Absolute euro change in value year-on-year."
+      - name: "% Mutatie"
+        description: "Year-on-year percentage change in value."
+      - name: "Index Mutatie"
+        description: "Cumulative index mutation relative to a base year."
+      - name: "Text"
+        description: "Display annotation text for the chart bar."

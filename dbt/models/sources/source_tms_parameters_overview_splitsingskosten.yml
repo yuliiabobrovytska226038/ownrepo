@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: tms
+    schema: tms
+    description: "Raw TMS report tables materialized by Dagster assets."
+    tables:
+      - name: parameters_overview_splitsingskosten
+        columns:
+          - name: "Waarderingscomplex"
+            description: "TMS valuation complex code."
+          - name: "Complexnaam"
+            description: "Name of the valuation complex."
+          - name: "Straatnaam"
+            description: "Street name of the complex."
+          - name: "Model"
+            description: "Valuation model applied to the complex."
+          - name: "Bron juridische splitsingskosten (JS)"
+            description: "Source of the applied legal unit-splitting cost parameter."
+          - name: "JS handboek waarde"
+            description: "Handbook legal splitting cost per unit."
+          - name: "JS waarde"
+            description: "Applied legal splitting cost per unit."
+          - name: "Bron technische splitsingskosten (TS)"
+            description: "Source of the applied technical unit-splitting cost parameter."
+          - name: "TS waarde"
+            description: "Applied technical splitting cost per unit."
+          - name: "Corporatie"
+            description: "Housing corporation name."
+          - name: "Jaar"
+            description: "Valuation year."
+          - name: "Peildatum"
+            description: "Valuation reference date (Dec 31)."

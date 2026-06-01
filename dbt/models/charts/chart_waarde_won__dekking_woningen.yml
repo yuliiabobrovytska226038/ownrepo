@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: chart_waarde_won__dekking_woningen
+    description: "Chart input for housing-coverage map. Grain: one row per province. Required columns: Provincies Code, Dekking naar woningen."
+    columns:
+      - name: "Provincies Code"
+        description: "Province geographic code."
+      - name: "Provincies Naam"
+        description: "Province name."
+      - name: "Aantal woningen onderzoek"
+        description: "Number of residential units included in the study."
+      - name: "Aantal woningen totaal"
+        description: "Total number of residential units in the province."
+      - name: "Dekking naar woningen"
+        description: "Housing coverage ratio (study units / total units)."

@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: int_chart_ontwikkeling_woningen_matched
+    description: "Filtered view of dataset_ontwikkeling for Woningen with _merge='both' (matched records only). Base for YoY value-development chart models."

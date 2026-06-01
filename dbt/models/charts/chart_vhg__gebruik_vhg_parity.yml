@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: chart_vhg__gebruik_vhg_parity
+    description: "Workbook parity input for market-value VHG usage. Grain: one row per freedom-grade label with EGW, MGW, and total usage percentages."
+    columns:
+      - name: "Vrijheidsgraad"
+        description: "Parameter freedom grade label."
+      - name: "EGW"
+        description: "VHG usage percentage for single-family dwellings."
+      - name: "MGW"
+        description: "VHG usage percentage for multi-family dwellings."
+      - name: "Totaal"
+        description: "Total VHG usage percentage across all dwelling types."
+      - name: "Text"
+        description: "Formatted label for chart display."

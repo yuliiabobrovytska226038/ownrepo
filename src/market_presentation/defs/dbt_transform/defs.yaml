@@ -1,0 +1,7 @@
+type: dagster_dbt.DbtProjectComponent
+
+attributes:
+  project: '{{ project_root }}/dbt'
+  prepare_if_dev: true
+  translation_settings:
+    enable_source_tests_as_checks: true

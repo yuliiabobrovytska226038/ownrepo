@@ -1,0 +1,46 @@
+version: 2
+
+sources:
+  - name: tms
+    schema: tms
+    description: "Raw TMS report tables materialized by Dagster assets."
+    tables:
+      - name: complex_references
+        description: "Referentie transacties per complex."
+        columns:
+          - name: "Complexcode"
+            description: "Valuation complex code."
+          - name: "Waarderingsmodel"
+            description: "Valuation model (doorexploiteren or uitponden)."
+          - name: "Deelportefeuille"
+            description: "Sub-portfolio designation (BASIC or FULL)."
+          - name: "Referentietype"
+            description: "Type of reference transaction used for benchmarking."
+          - name: "Volgnummer"
+            description: "Sequence number of the reference transaction."
+          - name: "Adresaanduiding"
+            description: "Address of the reference transaction property."
+          - name: "Objecttype"
+            description: "Property type of the reference transaction object."
+          - name: "Oppervlakte"
+            description: "Surface area of the reference property in m2."
+          - name: "Bouwjaar"
+            description: "Construction year of the reference property."
+          - name: "Transactieprijs"
+            description: "Transaction price of the comparable sale."
+          - name: "BAR"
+            description: "Gross initial yield (bruto aanvangsrendement) of the reference."
+          - name: "Transactiedatum"
+            description: "Date the reference transaction took place."
+          - name: "Kwalificatie t.o.v. te taxeren object"
+            description: "Qualification of the reference relative to the appraised object."
+          - name: "Toelichting"
+            description: "Explanatory notes for the reference transaction."
+          - name: "Bron"
+            description: "Data source of the reference transaction."
+          - name: "Corporatie"
+            description: "Housing corporation name."
+          - name: "Jaar"
+            description: "Valuation year."
+          - name: "Peildatum"
+            description: "Valuation reference date (Dec 31)."

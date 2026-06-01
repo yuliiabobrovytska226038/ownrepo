@@ -1,0 +1,57 @@
+name: 'market_presentation'
+
+config-version: 2
+version: '0.1'
+
+profile: 'dbt'
+
+flags:
+  send_anonymous_usage_stats: false
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+analysis-paths: ["analysis"]
+macro-paths: ["macros"]
+
+target-path: "target"
+clean-targets:
+    - "target"
+    - "dbt_packages"
+    - "logs"
+
+require-dbt-version: [">=1.0.0", "<2.0.0"]
+
+vars:
+  jaar: 2025  # Must equal max(ISSUE_YEARS) — see src/market_presentation/defs/config.py
+
+models:
+  market_presentation:
+    staging:
+      +schema: models
+      +materialized: table
+    int:
+      +schema: models
+      +materialized: table
+      # Models only consumed by dbt tests (not downstream models) are materialized as views
+      # to reduce build time. They produce identical results but skip disk write.
+      int_vastgoedgegevens:
+        +materialized: view
+      int_beleidswaarde:
+        +materialized: view
+      int_marktwaarde:
+        +materialized: view
+    marts:
+      +schema: models
+      +materialized: table
+    charts:
+      +schema: models
+      +materialized: view
+      # Source tables that feed multiple chart views should be materialized
+      # to avoid OOM when DuckDB evaluates deep view chains
+      chart_waardeontwikkeling_won__basis_source:
+        +materialized: table
+      chart_vhg__marktwaarde_source:
+        +materialized: table
+      chart_vhg__beleidswaarde_source:
+        +materialized: table

@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Environment For Local Python Installation",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy", "ByPass",
+        "-File", "${workspaceFolder}/.vscode/scripts/run-as-admin.ps1",
+        "-Command", "${workspaceFolder}/.vscode/scripts/build-python-environment.ps1 -WorkingDirectory \"${workspaceFolder}\" -PythonInstallationPath \"C:/Program` Files/Python312\""
+      ],
+      "problemMatcher": []
+    }
+  ]
+}

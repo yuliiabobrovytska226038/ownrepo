@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: chart_vhg__woz_corporatie
+    description: "Chart input for WOZ development boxplots. Grain: one row per corporation. Required columns: Corporatie, Stijging WOZ-waarde."
+    columns:
+      - name: "Corporatie"
+        description: "Housing corporation name."
+      - name: "median_woz_2024"
+        description: "Median WOZ assessed value for 2024."
+      - name: "median_woz_2023"
+        description: "Median WOZ assessed value for 2023."
+      - name: "Stijging WOZ-waarde"
+        description: "Year-on-year WOZ value growth percentage."

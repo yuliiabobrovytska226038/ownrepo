@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: tms
+    schema: tms
+    description: "Raw TMS report tables materialized by Dagster assets."
+    tables:
+      - name: rental_unit_mapping
+        description: "Maps rentalUnitInternalId → VHE-nr via VGR dataset JSON."
+        columns:
+          - name: "rentalUnitInternalId"
+            description: "TMS internal rental unit identifier (not equal to VHE-nr)."
+          - name: "VHE-nr"
+            description: "External rental unit number (VHE-nr)."
+          - name: "complexInternalId"
+            description: "TMS internal complex identifier."
+          - name: "Complexcode"
+            description: "Valuation complex code."
+          - name: "Corporatie"
+            description: "Housing corporation name."
+          - name: "Jaar"
+            description: "Valuation year."
+          - name: "Peildatum"
+            description: "Valuation reference date (Dec 31)."

@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: chart_historisch__basis_full_verschil
+    description: "Chart input for historical basis/full difference. Grain: one row per year. Required columns: Jaar, Verschil basis-full."
+    columns:
+      - name: "Jaar"
+        description: "Valuation year."
+      - name: "Verschil basis-full"
+        description: "Annual difference between Basis and Full market value scenarios."

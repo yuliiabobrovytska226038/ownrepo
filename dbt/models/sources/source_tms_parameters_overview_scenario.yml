@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: tms
+    schema: tms
+    description: "Raw TMS report tables materialized by Dagster assets."
+    tables:
+      - name: parameters_overview_scenario
+        columns:
+          - name: "Waarderingscomplex"
+            description: "TMS valuation complex code."
+          - name: "Complexnaam"
+            description: "Name of the valuation complex."
+          - name: "Straatnaam"
+            description: "Street name of the complex location."
+          - name: "Model"
+            description: "Valuation model applied to the complex."
+          - name: "Bron scenario (SC)"
+            description: "Source of the valuation scenario parameter."
+          - name: "SC waarde"
+            description: "Applied valuation scenario value."
+          - name: "Corporatie"
+            description: "Housing corporation name."
+          - name: "Jaar"
+            description: "Valuation year."
+          - name: "Peildatum"
+            description: "Valuation reference date (Dec 31)."

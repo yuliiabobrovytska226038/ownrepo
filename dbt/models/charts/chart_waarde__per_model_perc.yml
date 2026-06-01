@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: chart_waarde__per_model_perc
+    description: "Chart input for waarde pie charts. Grain: one row per waarde type and waarderingsmodel. Required columns: Waarde, Waarderingsmodel, % van totaal."
+    columns:
+      - name: "Waarde"
+        description: "Value type label (e.g., Marktwaarde or Beleidswaarde)."
+      - name: "Jaar"
+        description: "Valuation year."
+      - name: "Waarderingsmodel"
+        description: "Valuation model (Doorexploiteren or Uitponden)."
+      - name: "% van totaal"
+        description: "Percentage share of total value for this valuation model."
+      - name: "Text"
+        description: "Formatted percentage label for chart display."

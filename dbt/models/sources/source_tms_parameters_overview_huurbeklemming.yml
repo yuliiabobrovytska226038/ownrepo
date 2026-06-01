@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+  - name: tms
+    schema: tms
+    description: "Raw TMS report tables materialized by Dagster assets."
+    tables:
+      - name: parameters_overview_huurbeklemming
+        columns:
+          - name: "Waarderingscomplex"
+            description: "TMS valuation complex code."
+          - name: "Complexnaam"
+            description: "Name of the valuation complex."
+          - name: "VHE-nr"
+            description: "TMS rental unit (VHE) number."
+          - name: "Adres"
+            description: "Street address of the rental unit."
+          - name: "Model"
+            description: "Valuation model applied to the unit."
+          - name: "Handboektype"
+            description: "Handbook type used for parameter derivation."
+          - name: "Classificatie"
+            description: "Property classification within the valuation."
+          - name: "Bron huurbeklemming"
+            description: "Source of the rent restriction parameter."
+          - name: "Laatste jaar huurbeklemming"
+            description: "Final year the rent restriction applies."
+          - name: "Huurbeklemming"
+            description: "Assumed rent restriction cap applied during the restriction period."
+          - name: "Corporatie"
+            description: "Housing corporation name."
+          - name: "Jaar"
+            description: "Valuation year."
+          - name: "Peildatum"
+            description: "Valuation reference date (Dec 31)."

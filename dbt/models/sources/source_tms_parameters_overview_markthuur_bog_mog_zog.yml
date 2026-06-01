@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+  - name: tms
+    schema: tms
+    description: "Raw TMS report tables materialized by Dagster assets."
+    tables:
+      - name: parameters_overview_markthuur_bog_mog_zog
+        columns:
+          - name: "Waarderingscomplex"
+            description: "TMS valuation complex code."
+          - name: "Complexnaam"
+            description: "Name of the valuation complex."
+          - name: "VHE-nr"
+            description: "TMS rental unit (VHE) number."
+          - name: "Adres"
+            description: "Street address of the rental unit."
+          - name: "Model"
+            description: "Valuation model applied to the unit."
+          - name: "Handboektype"
+            description: "Handbook type used for parameter derivation."
+          - name: "Classificatie"
+            description: "Property classification within the valuation."
+          - name: "Bron markthuur (MH)"
+            description: "Source of the market rent parameter."
+          - name: "MH per m² VVO handboek waarde"
+            description: "Handbook market rent per m² net usable area (BOG/MOG/ZOG)."
+          - name: "MH per m² VVO waarde"
+            description: "Applied market rent per m² net usable area (BOG/MOG/ZOG)."
+          - name: "Corporatie"
+            description: "Housing corporation name."
+          - name: "Jaar"
+            description: "Valuation year."
+          - name: "Peildatum"
+            description: "Valuation reference date (Dec 31)."

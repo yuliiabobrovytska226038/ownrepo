@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: chart_waarde__gebruik_full_per_type
+    description: "Chart input for the gebruik-full bar chart. Grain: one row per waarderingsmodel, handboektype, and year. Required columns: Waarderingsmodel, Handboektype, Jaar, % Full, Text."
+    columns:
+      - name: "Waarde"
+        description: "Value type label (e.g., Marktwaarde or Beleidswaarde)."
+      - name: "Jaar"
+        description: "Valuation year."
+      - name: "Waarderingsmodel"
+        description: "Valuation model (Doorexploiteren or Uitponden)."
+      - name: "Handboektype"
+        description: "Property type per handbook (Woning, BOG, MOG, ZOG, Parkeren)."
+      - name: "% Full"
+        description: "Share of units valued under the Full sub-portfolio."
+      - name: "Text"
+        description: "Formatted percentage Full label for chart display."

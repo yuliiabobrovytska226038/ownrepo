@@ -1,0 +1,25 @@
+#!/bin/bash
+set -e # fail on any error
+
+PYTHON_PATH=$(which python)
+echo "Using Python interpreter at: $PYTHON_PATH"
+
+echo "Installing UV..."
+pip install --upgrade pip uv
+uv --version
+
+echo "Verifying pyproject.toml configuration..."
+cat pyproject.toml | grep -A 5 "\[tool.uv.index\]" || echo "No uv.index configuration found"
+
+echo "Running default assemble script..."
+export DISABLE_PYPROJECT_TOML_PROCESSING=true
+/usr/libexec/s2i/assemble
+
+echo "Installing dependencies with UV..."
+
+# Set credentials for UV index (name must match [[tool.uv.index]] name in pyproject.toml)
+export UV_INDEX_OFNEXUS_USERNAME="$PACKAGE_SOURCE_USERNAME"
+export UV_INDEX_OFNEXUS_PASSWORD="$PACKAGE_SOURCE_PAT"
+
+uv export --no-hashes --no-dev --format requirements-txt --python "$PYTHON_PATH" > requirements.txt
+uv pip sync --system --python "$PYTHON_PATH" requirements.txt

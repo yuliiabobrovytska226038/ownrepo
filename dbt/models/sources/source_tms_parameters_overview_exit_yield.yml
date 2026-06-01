@@ -1,0 +1,39 @@
+version: 2
+
+sources:
+  - name: tms
+    schema: tms
+    description: "Raw TMS report tables materialized by Dagster assets."
+    tables:
+      - name: parameters_overview_exit_yield
+        columns:
+          - name: "Waarderingscomplex"
+            description: "TMS valuation complex code."
+          - name: "Complexnaam"
+            description: "Name of the valuation complex."
+          - name: "VHE-nr"
+            description: "TMS rental unit (VHE) number."
+          - name: "Adres"
+            description: "Street address of the rental unit."
+          - name: "Model"
+            description: "Valuation model applied to the unit."
+          - name: "Handboektype"
+            description: "Handbook type used for parameter derivation."
+          - name: "Classificatie"
+            description: "Property classification within the valuation."
+          - name: "Bron exit yield (EY)"
+            description: "Source of the exit yield value."
+          - name: "EY doorexploiteren handboek"
+            description: "Handbook exit yield for the continue-to-let scenario."
+          - name: "EY uitponden handboek"
+            description: "Handbook exit yield for the sell-on-vacancy scenario."
+          - name: "EY doorexploiteren"
+            description: "Applied exit yield for the continue-to-let scenario."
+          - name: "EY uitponden"
+            description: "Applied exit yield for the sell-on-vacancy scenario."
+          - name: "Corporatie"
+            description: "Housing corporation name."
+          - name: "Jaar"
+            description: "Valuation year."
+          - name: "Peildatum"
+            description: "Valuation reference date (Dec 31)."

@@ -1,0 +1,36 @@
+version: 2
+
+sources:
+  - name: tms
+    schema: tms
+    description: "Raw TMS report tables materialized by Dagster assets."
+    tables:
+      - name: market_value_parameters_vhe_param_benaderingsmethode
+        description: "VHE-level valuation approach parameters."
+        columns:
+          - name: "VHE-nr"
+            description: "Unique rental unit identifier."
+          - name: "Adres"
+            description: "Street address of the rental unit."
+          - name: "Complexcode"
+            description: "Valuation complex code."
+          - name: "Complexnaam"
+            description: "Name of the valuation complex."
+          - name: "Waarderingsmodel"
+            description: "Valuation model: doorexploiteren (hold) or uitponden (vacant sale)."
+          - name: "Deelportefeuille"
+            description: "Sub-portfolio classification of the rental unit."
+          - name: "Segment huurregime"
+            description: "Rent regime segment (DAEB or Niet-DAEB)."
+          - name: "Classificatie"
+            description: "Property classification within the valuation framework."
+          - name: "Vaste waarde (VW)"
+            description: "Indicates whether a fixed value override is applied."
+          - name: "VW waarde"
+            description: "Fixed value amount when a fixed value override is used."
+          - name: "Corporatie"
+            description: "Housing corporation name."
+          - name: "Jaar"
+            description: "Valuation year."
+          - name: "Peildatum"
+            description: "Valuation reference date (Dec 31)."

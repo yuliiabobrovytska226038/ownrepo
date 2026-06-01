@@ -1,0 +1,38 @@
+version: 2
+
+sources:
+  - name: tms
+    schema: tms
+    description: "Raw TMS report tables materialized by Dagster assets."
+    tables:
+      - name: market_value_basis
+        description: "Per-VHE market values with BASIC/FULL pivot."
+        columns:
+          - name: "rentalUnitInternalId"
+            description: "TMS internal rental unit identifier (not equal to VHE-nr)."
+          - name: "complexInternalId"
+            description: "TMS internal complex identifier."
+          - name: "Marktwaarde"
+            description: "Total market value for the full sub-portfolio."
+          - name: "Marktwaarde doorexploiteren"
+            description: "Market value under the hold (DCF) scenario."
+          - name: "Marktwaarde uitponden"
+            description: "Market value under the vacant sale scenario."
+          - name: "Scenario"
+            description: "Selected valuation scenario for the full sub-portfolio."
+          - name: "Marktwaarde basis"
+            description: "Market value for the basic sub-portfolio."
+          - name: "Marktwaarde basis doorexploiteren"
+            description: "Basic sub-portfolio market value under hold scenario."
+          - name: "Marktwaarde basis uitponden"
+            description: "Basic sub-portfolio market value under vacant sale scenario."
+          - name: "Scenario basis"
+            description: "Selected valuation scenario for the basic sub-portfolio."
+          - name: "Corporatie"
+            description: "Housing corporation name."
+          - name: "ISSUE_DATE"
+            description: "Date the valuation report was issued."
+          - name: "Jaar"
+            description: "Valuation year."
+          - name: "Peildatum"
+            description: "Valuation reference date (Dec 31)."

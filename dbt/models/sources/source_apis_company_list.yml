@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: apis
+    schema: apis
+    description: "Company metadata from the TMS API."
+    tables:
+      - name: company_list
+        description: "Full company list from the TMS API."
+        columns:
+          - name: "company_id"
+            description: "Internal TMS identifier for the housing corporation."
+          - name: "is_customer"
+            description: "Whether the company is a current Ortec Finance client."

@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: chart_waarde_won__perc_full_coropplus
+    description: "Chart input for percentage-full COROP-plus map. Grain: one row per COROP-plus region. Required columns: COROP-plusgebieden Code, COROP-plusgebieden Naam, % Full."
+    columns:
+      - name: "COROP-plusgebieden Code"
+        description: "COROP-plus region geographic code."
+      - name: "COROP-plusgebieden Naam"
+        description: "COROP-plus region name."
+      - name: "% Full"
+        description: "Share of portfolio units in the Full sub-portfolio."

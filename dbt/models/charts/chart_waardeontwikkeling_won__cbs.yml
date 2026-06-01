@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: chart_waardeontwikkeling_won__cbs
+    description: "Chart input for CBS house price mutation benchmark. Grain: one row per year with available YoY mutation. Required columns: Jaar, mutatie_yoy."
+    columns:
+      - name: "Jaar"
+        description: "Valuation year."
+      - name: "mutatie_yoy"
+        description: "CBS year-on-year house price change (benchmark)."

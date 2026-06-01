@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: chart_waarde_won__huurstijging
+    description: "Chart input for policy value rent-increase line chart. Grain: one row per classification and projected year. Required columns: Classificatie, Jaar, Huurstijging."
+    columns:
+      - name: "Classificatie"
+        description: "Value classification or housing segment."
+      - name: "Jaar"
+        description: "Valuation year."
+      - name: "Huurstijging"
+        description: "Projected rent growth rate for the classification and year."

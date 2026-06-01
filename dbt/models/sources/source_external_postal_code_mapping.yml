@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: external
+    schema: external
+    description: "External reference data (CBS, GeoJSON, postal codes)."
+    tables:
+      - name: postal_code_mapping
+        description: "Waarderingsparameters — postcode to COROP region mapping."
+        columns:
+          - name: "postcode"
+            description: "Dutch postal code (4-digit)."
+          - name: "corop_gebied"
+            description: "COROP region name for the postal code."
+          - name: "regio"
+            description: "Extended COROP-plus region name."
+          - name: "gemeentecode"
+            description: "CBS municipality code."
+          - name: "gemeente"
+            description: "Municipality name."
+          - name: "categorie"
+            description: "Valuation parameter category for the postal code."

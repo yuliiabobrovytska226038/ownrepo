@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: dataset_validatie_aantallen
+    description: "Validation count summary showing filter funnel from all VHEs to the validation subset."
+    columns:
+      - name: "Omschrijving"
+        description: "Category label describing the validation group."
+      - name: "Corporaties"
+        description: "Count of housing corporations in the validation group."
+      - name: "Werkmaatschappijen"
+        description: "Count of operating subsidiaries in the validation group."
+      - name: "Complexen"
+        description: "Count of valuation complexes in the validation group."
+      - name: "VHEs"
+        description: "Count of rental units (VHE) in the validation group."
+      - name: "Marktwaarde (mlrd)"
+        description: "Total market value in billions of euros."

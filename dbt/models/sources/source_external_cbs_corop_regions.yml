@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: external
+    schema: external
+    description: "External reference data (CBS, GeoJSON, postal codes)."
+    tables:
+      - name: cbs_corop_regions
+        description: "CBS geographic mapping (COROP-plus, provinces)."
+        columns:
+          - name: "gemeentecode"
+            description: "CBS municipality code."
+          - name: "corop_code"
+            description: "CBS COROP region code."
+          - name: "corop_naam"
+            description: "CBS COROP region name."
+          - name: "provincie_code"
+            description: "Dutch province code."
+          - name: "provincie_naam"
+            description: "Dutch province name."

@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: chart_waarde_won__median_waarde
+    description: "Chart input for median waarde boxplots. Grain: one row per corporation, waarde type, and classification. Required columns: Corporatie, Waarde, Classificatie, Median waarde."
+    columns:
+      - name: "Waarde"
+        description: "Value type label (market value or policy value)."
+      - name: "Classificatie"
+        description: "Value classification or housing segment."
+      - name: "Corporatie"
+        description: "Housing corporation name."
+      - name: "Median waarde"
+        description: "Median value amount per corporation and classification."

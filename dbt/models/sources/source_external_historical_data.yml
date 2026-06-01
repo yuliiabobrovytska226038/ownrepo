@@ -1,0 +1,40 @@
+version: 2
+
+sources:
+  - name: external
+    schema: external
+    description: "External reference data (CBS, GeoJSON, postal codes)."
+    tables:
+      - name: historical_data
+        description: "Normalized historical market presentation benchmark data."
+        columns:
+          - name: "valuation_type"
+            description: "Type of valuation (market value or policy value)."
+          - name: "jaar"
+            description: "Valuation year."
+          - name: "pct_mutatie"
+            description: "Year-over-year percentage mutation."
+          - name: "index_mutatie"
+            description: "Year-over-year index mutation value."
+          - name: "indexcijfer"
+            description: "Cumulative index value for the valuation year."
+          - name: "sheet"
+            description: "Source sheet name within the historical data file."
+          - name: "valuation_model"
+            description: "Valuation model used (e.g., doorexploiteren, uitponden)."
+          - name: "datum"
+            description: "Reference date for the historical data point."
+          - name: "discount_rate"
+            description: "Discount rate used in the valuation model."
+          - name: "percentage"
+            description: "Percentage value for the historical data point."
+          - name: "unnamed_0"
+            description: "Unnamed first column from the historical data file."
+          - name: "median"
+            description: "Median value across corporations for the period."
+          - name: "unnamed_2"
+            description: "Unnamed third column from the historical data file."
+          - name: "unnamed_3"
+            description: "Unnamed fourth column from the historical data file."
+          - name: "unnamed_4"
+            description: "Unnamed fifth column from the historical data file."

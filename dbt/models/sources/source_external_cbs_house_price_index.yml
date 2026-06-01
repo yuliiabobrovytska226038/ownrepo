@@ -1,0 +1,34 @@
+version: 2
+
+sources:
+  - name: external
+    schema: external
+    description: "External reference data (CBS, GeoJSON, postal codes)."
+    tables:
+      - name: cbs_house_price_index
+        description: "CBS house price index mutations."
+        columns:
+          - name: "id"
+            description: "CBS row identifier."
+          - name: "perioden"
+            description: "CBS period code (quarter and year)."
+          - name: "prijsindex_verkoopprijzen_1"
+            description: "Price index of residential sale prices."
+          - name: "ontwikkeling_tovvoorgaande_periode_2"
+            description: "Price change versus prior period (%)."
+          - name: "ontwikkeling_toveen_jaar_eerder_3"
+            description: "Price change versus one year earlier (%)."
+          - name: "verkochte_woningen_4"
+            description: "Number of residential homes sold in the period."
+          - name: "ontwikkeling_tovvoorgaande_periode_5"
+            description: "Volume change versus prior period (%)."
+          - name: "ontwikkeling_toveen_jaar_eerder_6"
+            description: "Volume change versus one year earlier (%)."
+          - name: "gemiddelde_verkoopprijs_7"
+            description: "Average sale price of residential properties."
+          - name: "totale_waarde_verkoopprijzen_8"
+            description: "Total value of all residential property sales."
+          - name: "jaar"
+            description: "Valuation year."
+          - name: "mutatie_yoy"
+            description: "Year-over-year price mutation used in charts."

@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: chart_validatie__basis_full_portefeuilles
+    description: "Chart input for basis/full validation distribution charts. Grain: one row per afwijking bucket. Required columns: Afwijking, Procent, Aantal portefeuilles, Naar woning gewogen, Naar woning gewogen text."
+    columns:
+      - name: "Afwijking"
+        description: "Deviation bucket label for basis/full difference distribution."
+      - name: "Aantal woningen"
+        description: "Number of dwellings in this deviation bucket."
+      - name: "Aantal portefeuilles"
+        description: "Number of portfolios in this deviation bucket."
+      - name: "Procent"
+        description: "Percentage of portfolios in this deviation bucket."
+      - name: "Naar woning gewogen"
+        description: "Housing-weighted share for this deviation bucket."
+      - name: "Naar woning gewogen text"
+        description: "Formatted label for the housing-weighted share."

@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: int_chart_ontwikkeling_woningen_egw_mgw
+    description: "Filtered view of dataset_ontwikkeling for Woningen, EGW/MGW paired across years with Indexatiegebied. Base for VHG and value-development chart models."

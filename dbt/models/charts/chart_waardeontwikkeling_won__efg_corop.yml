@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: chart_waardeontwikkeling_won__efg_corop
+    description: "Chart input for EFG-label percentage COROP-plus map. Grain: one row per COROP-plus region. Required columns: COROP-plusgebieden Code, perc_EFG."
+    columns:
+      - name: "COROP-plusgebieden Code"
+        description: "COROP-plus region geographic code."
+      - name: "total_rows"
+        description: "Total number of units in the COROP-plus region."
+      - name: "count_E_F_G"
+        description: "Count of units with energy label E, F, or G."
+      - name: "perc_EFG"
+        description: "Percentage of units with poor energy label (E, F, or G) per COROP region."

@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_tms_percentage_full
+    description: "Reconstructs the removed TMS 'Percentage Full' sheet by counting non-default freedom-degree parameters per VHE."
+    columns:
+      - name: "VHE-nr"
+        description: "Unique rental unit identifier."
+      - name: "Complexcode"
+        description: "Valuation complex code."
+      - name: "Corporatie"
+        description: "Housing corporation name."
+      - name: "Jaar"
+        description: "Valuation year."
+      - name: "Peildatum"
+        description: "Valuation reference date (Dec 31)."
+      - name: "Aantal vrijheidsgraden toegepast"
+        description: "Number of standard full-valuation freedom-degree overrides applied per VHE."
+      - name: "% Full"
+        description: "Binary flag indicating at least one standard full-valuation freedom-degree override."
+      - name: "Aantal vrije waardering overrules toegepast"
+        description: "Number of fully-free-valuation override indicators applied per VHE."
+      - name: "% Vrije waardering"
+        description: "Binary flag indicating at least one fully-free-valuation override."
+      - name: "Waarderingstype"
+        description: "Mutually exclusive valuation type: Basis, Full, or Vrije waardering."

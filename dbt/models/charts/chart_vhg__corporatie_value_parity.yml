@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: chart_vhg__corporatie_value_parity
+    description: "Workbook parity input for selected VHG corporation-level value changes. Grain: one row per value type, VHG key, corporation, and optional waarderingstype."
+    columns:
+      - name: "Waarde"
+        description: "Value type label (Marktwaarde or Beleidswaarde)."
+      - name: "VhgKey"
+        description: "VHG-specific key identifying the metric dimension."
+      - name: "ValueColumn"
+        description: "Column name of the value metric being compared."
+      - name: "Corporatie"
+        description: "Housing corporation name."
+      - name: "Waarderingstype"
+        description: "Valuation type label (Basis or Full)."
+      - name: "MetricValue"
+        description: "Computed metric value for parity comparison."

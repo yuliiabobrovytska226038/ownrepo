@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: chart_waardeontwikkeling_won__historical
+    description: "Chart input for historical woningen value-development benchmarks. Grain: one row per year and waarderingstype. Required columns: Jaar, Waarderingstype, % Mutatie, Index Mutatie."
+    columns:
+      - name: "Waarderingstype"
+        description: "Valuation type (e.g. marktwaarde, beleidswaarde)."
+      - name: "Jaar"
+        description: "Valuation year."
+      - name: "% Mutatie"
+        description: "Year-on-year percentage change in value."
+      - name: "Index Mutatie"
+        description: "Cumulative index mutation relative to a base year."
+      - name: "Indexcijfer"
+        description: "Cumulative index value relative to the base year."

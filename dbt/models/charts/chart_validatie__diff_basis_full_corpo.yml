@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: chart_validatie__diff_basis_full_corpo
+    description: "Chart parity input for basis/full validation per corporation. Grain: one row per corporation. Required columns: Corporatie, Marktwaarde, Marktwaarde basis corr, Aantal woningen, Basis min Full, Basis Full Perc, Afwijking."
+    columns:
+      - name: "Corporatie"
+        description: "Housing corporation name."
+      - name: "Marktwaarde"
+        description: "Full-portfolio market value for this corporation."
+      - name: "Marktwaarde basis corr"
+        description: "Basis-corrected market value for this corporation."
+      - name: "Aantal woningen"
+        description: "Number of dwellings for this corporation."
+      - name: "Basis min Full"
+        description: "Absolute difference between Basis and Full market value."
+      - name: "Basis Full Perc"
+        description: "Percentage difference between Basis and Full market value."
+      - name: "Afwijking"
+        description: "Deviation category label for this corporation."

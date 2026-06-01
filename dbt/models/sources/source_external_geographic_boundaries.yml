@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: external
+    schema: external
+    description: "External reference data (CBS, GeoJSON, postal codes)."
+    tables:
+      - name: geographic_boundaries
+        description: "CBS GeoJSON boundaries for municipalities and COROP regions."
+        columns:
+          - name: "source_file"
+            description: "Source GeoJSON file name."
+          - name: "statcode"
+            description: "CBS statistical area code."
+          - name: "jrstatcode"
+            description: "Year-specific CBS statistical area code."
+          - name: "statnaam"
+            description: "Name of the CBS statistical area."
+          - name: "rubriek"
+            description: "Rubric or category of the statistical boundary."
+          - name: "feature_id"
+            description: "GeoJSON feature identifier."
+          - name: "geometry_type"
+            description: "GeoJSON geometry type (e.g., Polygon, MultiPolygon)."
+          - name: "geometry_json"
+            description: "GeoJSON geometry object as a JSON string."

@@ -1,0 +1,22 @@
+{
+    "name": "Python 3",
+    "image": "mcr.microsoft.com/devcontainers/python:2-3.12-bullseye",
+    "remoteEnv": {
+        "UV_INDEX_OFNEXUS_USERNAME": "${localEnv:UV_INDEX_OFNEXUS_USERNAME}",
+        "UV_INDEX_OFNEXUS_PASSWORD": "${localEnv:UV_INDEX_OFNEXUS_PASSWORD}"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.debugpy",
+                "charliermarsh.ruff",
+                "ms-python.vscode-pylance",
+                "sonarsource.sonarlint-vscode",
+                "tamasfe.even-better-toml",
+                "ms-vscode-remote.remote-containers"
+            ]
+        }
+    },
+    "postCreateCommand": "pip install pip uv --upgrade && uv lock --upgrade && uv sync --dev"
+}

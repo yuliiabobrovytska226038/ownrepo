@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: chart_historisch__uitponden_percentage
+    description: "Chart input for historical uitponden percentages. Grain: one row per year and waarderingstype. Required columns: Jaar, Waarderingstype, Percentage."
+    columns:
+      - name: "Jaar"
+        description: "Valuation year."
+      - name: "Waarderingstype"
+        description: "Valuation type label (Doorexploiteren or Uitponden)."
+      - name: "Percentage"
+        description: "Share of units valued under this valuation type."

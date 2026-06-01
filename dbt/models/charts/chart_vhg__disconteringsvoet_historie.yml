@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: chart_vhg__disconteringsvoet_historie
+    description: "Chart input for discount-rate history line chart. Grain: one row per year and disconteringsvoet category. Required columns: Jaar, Disconteringsvoet, Percentage."
+    columns:
+      - name: "Jaar"
+        description: "Valuation year."
+      - name: "Percentage"
+        description: "Discount rate percentage for this year and category."
+      - name: "Disconteringsvoet"
+        description: "Discount rate category label."

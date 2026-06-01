@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: chart_waarde_won__ratio
+    description: "Chart input for policy-to-market value ratio boxplot. Grain: one row per corporation. Required columns: Corporatie, ratio."
+    columns:
+      - name: "ratio"
+        description: "Policy-to-market value ratio (beleidswaarde / marktwaarde)."
+      - name: "Corporatie"
+        description: "Housing corporation name."

@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: chart_waarde_won__efg
+    description: "Chart input for EFG-label percentage boxplots. Grain: one row per corporation and classification. Required columns: Corporatie, Classificatie, pct_EFG."
+    columns:
+      - name: "Classificatie"
+        description: "Value classification or housing segment."
+      - name: "Corporatie"
+        description: "Housing corporation name."
+      - name: "total_rows"
+        description: "Total number of units with energy label data."
+      - name: "total_valid_rows"
+        description: "Number of units with a valid (non-null) energy label."
+      - name: "count_E_F_G"
+        description: "Count of units with energy label E, F, or G."
+      - name: "pct_EFG"
+        description: "Percentage of units with poor energy label (E, F, or G)."

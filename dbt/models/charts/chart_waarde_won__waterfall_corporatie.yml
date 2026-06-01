@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: chart_waarde_won__waterfall_corporatie
+    description: "Chart input for policy value waterfall component boxplots. Grain: one row per corporation. Required columns: Corporatie plus the configured beleidswaarde waterfall component columns."
+    columns:
+      - name: "Corporatie"
+        description: "Housing corporation name."
+      - name: "Marktwaarde"
+        description: "Total market value per corporation."
+      - name: "Beschikbaarheid (scenario)"
+        description: "Availability scenario discount component."
+      - name: "Beschikbaarheid (eindwaarde)"
+        description: "Availability end-value discount component."
+      - name: "Beschikbaarheid (overdrachtskosten)"
+        description: "Availability transfer-cost discount component."
+      - name: "Beschikbaarheid (60 jaar)"
+        description: "Availability 60-year component discount."
+      - name: "Betaalbaarheid"
+        description: "Affordability discount component of policy value."
+      - name: "Kwaliteit (onderhoud)"
+        description: "Quality maintenance discount component."
+      - name: "Kwaliteit (EFG-labels)"
+        description: "Quality EFG energy label discount component."
+      - name: "Beheer"
+        description: "Management discount component of policy value."
+      - name: "Disconteringsvoet"
+        description: "Discount rate component of policy value."
+      - name: "Beleidswaarde"
+        description: "Total policy (social) value per corporation."

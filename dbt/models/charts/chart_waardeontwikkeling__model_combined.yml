@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: chart_waardeontwikkeling__model_combined
+    description: "Chart input combining current-year model data with historical reference. Grain: one row per year and waarderingsmodel. Pre-sorted by model order and year."
+    columns:
+      - name: "Waarderingsmodel"
+        description: "Valuation model (Woningen, Parkeren, BOG/MOG/ZOG)."
+      - name: "% Mutatie"
+        description: "Year-over-year percentage change in market value."
+      - name: "Jaar"
+        description: "Valuation year."
+      - name: "Text"
+        description: "Formatted label displaying % Mutatie for chart annotation."

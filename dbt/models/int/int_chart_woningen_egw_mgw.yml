@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: int_chart_woningen_egw_mgw
+    description: "Filtered view of dataset_basis for current chart year, Woningen model, EGW/MGW handboektype. Base for multiple chart models."

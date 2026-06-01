@@ -1,0 +1,8 @@
+dbt:
+  target: local
+  outputs:
+
+    local:
+      type: duckdb
+      path: "{{ env_var('DBT_DUCKDB_PATH', 'C:/Dev/rev-market-presentation/database/local.duckdb') }}"
+      threads: 1
